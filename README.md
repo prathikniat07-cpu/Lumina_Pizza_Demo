@@ -27,5 +27,5 @@ UI/UX Design Patterns: Implementation of clean typography hierarchies, deliberat
 💡 Project Purpose & Client Showcase
 This project is a high-fidelity frontend concept and live demo designed to showcase modern web capabilities to potential clients, restaurant owners, and hospitality brands. It serves as a visual and interactive blueprint to demonstrate how a premium digital presence can elevate a restaurant's brand identity.
 
-<img width="1024" height="627" alt="image" src="https://github.com/user-attachments/assets/b67b992d-6198-48ca-aefa-f1be7bb01dc6" />
+
 

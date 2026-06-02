@@ -1,0 +1,201 @@
+/* ==========================================================================
+   DESIGN SYSTEM & VARIABLES
+   ========================================================================== */
+:root {
+  --color-bg-obsidian: #000000;
+  --color-primary: #e63946; /* Tomato Red */
+  --color-secondary: #f4a261; /* Golden Crust */
+  --color-text-light: #f7f7f7;
+  --color-text-muted: #959aa6;
+  
+  --font-primary: 'Outfit', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-glow: 0 0 40px rgba(244, 162, 97, 0.15);
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-bg-obsidian);
+  color: var(--color-text-light);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: #1c1c24;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
+}
+
+/* ==========================================================================
+   PRELOADER SCREEN
+   ========================================================================== */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-obsidian);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.8s cubic-bezier(0.77, 0, 0.175, 1), visibility 0.8s;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-content {
+  text-align: center;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.pizza-loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px;
+}
+
+.pizza-svg {
+  width: 100%;
+  height: 100%;
+  animation: rotatePizza 4s linear infinite;
+}
+
+.pizza-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: var(--shadow-glow);
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+.slice {
+  transform-origin: 50px 50px;
+  animation: loadSlice 2s ease-in-out infinite alternate;
+}
+.slice-1 { animation-delay: 0.1s; }
+.slice-2 { animation-delay: 0.3s; }
+.slice-3 { animation-delay: 0.5s; }
+.slice-4 { animation-delay: 0.7s; }
+
+@keyframes rotatePizza {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes loadSlice {
+  0% { transform: scale(0.85); opacity: 0.3; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.loader-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-text-light);
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.loader-subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 2px;
+  transition: width 0.1s ease;
+}
+
+.progress-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+/* ==========================================================================
+   SCROLL INTERACTIVE CANVAS CONTAINER
+   ========================================================================== */
+.scroll-container {
+  position: relative;
+  width: 100%;
+  height: 500vh; /* Controlled height for scroll progression */
+  background: var(--color-bg-obsidian);
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-bg-obsidian);
+}
+
+.canvas-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+#pizza-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

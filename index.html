@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMINA PIZZA | Crafted with Passion</title>
+  <meta name="description" content="Embark on a visual culinary journey. Scroll to assemble and bake the perfect Neapolitan pizza, frame by frame, built with passion and premium ingredients.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN with plugins -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-dim": "#131313",
+                    "inverse-primary": "#b52424",
+                    "primary": "#ffb4ac",
+                    "background": "#131313",
+                    "surface-variant": "#353534",
+                    "on-tertiary-fixed": "#221b00",
+                    "on-secondary-fixed-variant": "#822700",
+                    "primary-fixed-dim": "#ffb4ac",
+                    "on-tertiary-fixed-variant": "#544600",
+                    "surface-bright": "#393939",
+                    "on-secondary-container": "#ffddd2",
+                    "on-primary-fixed": "#410003",
+                    "on-surface-variant": "#e2beba",
+                    "on-surface": "#e5e2e1",
+                    "surface": "#131313",
+                    "surface-container": "#201f1f",
+                    "surface-tint": "#ffb4ac",
+                    "tertiary-fixed": "#ffe16d",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "primary-fixed": "#ffdad6",
+                    "on-primary-fixed-variant": "#92030f",
+                    "inverse-on-surface": "#313030",
+                    "inverse-surface": "#e5e2e1",
+                    "secondary-container": "#b73a00",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "on-secondary": "#5c1900",
+                    "surface-container-highest": "#353534",
+                    "on-primary-container": "#ffc8c2",
+                    "primary-container": "#b22222",
+                    "on-primary": "#690007",
+                    "secondary": "#ffb59c",
+                    "tertiary": "#e9c400",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#2a2a2a",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed": "#390c00",
+                    "on-tertiary": "#3a3000",
+                    "tertiary-container": "#c9a900",
+                    "on-tertiary-container": "#4c3e00",
+                    "secondary-fixed": "#ffdbcf",
+                    "outline": "#aa8986",
+                    "surface-container-low": "#1c1b1b",
+                    "on-background": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "outline-variant": "#5a403e"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "20px",
+                    "unit": "8px",
+                    "margin-desktop": "80px",
+                    "section-gap": "120px"
+                },
+                "fontFamily": {
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"]
+                },
+                "fontSize": {
+                    "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                    "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "display-lg-mobile": ["40px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                    "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                    "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }]
+                }
+            }
+        }
+    }
+  </script>
+  
+  <!-- Tailwind Custom CSS -->
+  <style>
+    .glass-panel {
+        background: rgba(32, 31, 31, 0.4);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glow-effect {
+        box-shadow: 0 0 20px rgba(226, 88, 34, 0.15);
+    }
+    .text-glow {
+        text-shadow: 0 0 10px rgba(226, 88, 34, 0.3);
+    }
+    /* Hide scrollbar for carousel */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+  </style>
+
+  <!-- Custom Scroll Stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="pizza-loader">
+        <svg viewBox="0 0 100 100" class="pizza-svg">
+          <circle cx="50" cy="50" r="45" stroke="#2a2a2a" stroke-width="2" fill="none" />
+          <path d="M50,50 L50,5 A45,45 0 0,1 95,50 Z" fill="#E63946" class="slice slice-1" />
+          <path d="M50,50 L95,50 A45,45 0 0,1 50,95 Z" fill="#F4A261" class="slice slice-2" />
+          <path d="M50,50 L50,95 A45,45 0 0,1 5,50 Z" fill="#E9C46A" class="slice slice-3" />
+          <path d="M50,50 L5,50 A45,45 0 0,1 50,5 Z" fill="#2A9D8F" class="slice slice-4" />
+        </svg>
+        <div class="pizza-glow"></div>
+      </div>
+      <h2 class="loader-title">Slice of Art</h2>
+      <p class="loader-subtitle">Gathering fresh ingredients...</p>
+      <div class="progress-bar-container">
+        <div class="progress-bar" id="load-progress"></div>
+      </div>
+      <div class="progress-text" id="load-percentage">0%</div>
+    </div>
+  </div>
+
+  <!-- Scroll Animation Section -->
+  <section id="scroll-narrative" class="scroll-container">
+    <div class="sticky-container">
+      <!-- High-performance Full-Screen Canvas -->
+      <div class="canvas-wrapper">
+        <canvas id="pizza-canvas"></canvas>
+      </div>
+      
+      <!-- Overlay Hero Text -->
+      <div id="hero-scroll-text" class="absolute inset-0 flex flex-col justify-center items-center text-center px-gutter z-10 pointer-events-none select-none">
+        <h1 class="font-display-lg text-6xl md:text-8xl mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-[#ffe16d] via-[#ffb59c] to-[#E25822] drop-shadow-[0_4px_12px_rgba(226,88,34,0.15)]">
+          Lumina Pizza
+        </h1>
+        <p class="font-body-lg text-xl md:text-2xl text-[#ffdbcf]/90 max-w-2xl tracking-wider">
+          Where Every Slice Tells a Story
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <!-- Feature Menu -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="menu">
+      <div class="text-center mb-16">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Signature Pizzas</h2>
+        <p class="font-body-md text-on-surface-variant">Curated recipes, wood-fired to elevate every ingredient.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="group relative rounded-xl overflow-hidden glass-panel border border-white/5 transition-transform hover:-translate-y-2 duration-300">
+          <div class="h-64 w-full overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A top-down view of a gourmet Truffle Mushroom pizza on a rustic wooden table. The lighting is cinematic, highlighting the golden crust, melted mozzarella, and earthy tones of roasted mushrooms and fresh thyme. Dark, moody aesthetic." src="/truffle_mushroom.png"/>
+          </div>
+          <div class="p-6 relative">
+            <div class="absolute top-0 right-6 -translate-y-1/2 bg-surface-container text-tertiary font-label-md px-3 py-1 rounded-full border border-tertiary/30 shadow-lg">
+              $24.00
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2 mt-2">Truffle Mushroom</h3>
+            <p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Wild mushrooms, truffle oil base, mozzarella, fresh thyme, and a hint of garlic.</p>
+            <button class="w-full py-2 border border-primary/30 rounded-full text-primary font-label-md hover:bg-primary/10 transition-colors">
+              Add to Order
+            </button>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="group relative rounded-xl overflow-hidden glass-panel border border-white/5 transition-transform hover:-translate-y-2 duration-300">
+          <div class="h-64 w-full overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A close-up 45-degree angle shot of a Spicy Pepperoni pizza. The pepperoni cups are perfectly charred and glistening with oil, set against a backdrop of deeply browned crust and melted cheese. Warm, evocative lighting emphasizing the spicy red hues." src="/spicy_pepperoni.png"/>
+          </div>
+          <div class="p-6 relative">
+            <div class="absolute top-0 right-6 -translate-y-1/2 bg-surface-container text-tertiary font-label-md px-3 py-1 rounded-full border border-tertiary/30 shadow-lg">
+              $21.00
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2 mt-2">Spicy Pepperoni</h3>
+            <p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">San Marzano tomato sauce, double pepperoni, hot honey drizzle, and fresh jalapeños.</p>
+            <button class="w-full py-2 border border-primary/30 rounded-full text-primary font-label-md hover:bg-primary/10 transition-colors">
+              Add to Order
+            </button>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="group relative rounded-xl overflow-hidden glass-panel border border-white/5 transition-transform hover:-translate-y-2 duration-300">
+          <div class="h-64 w-full overflow-hidden">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A vibrant Garden Fresh vegetarian pizza featuring bright green bell peppers, red onions, black olives, and fresh basil leaves on a thin, crispy base. The lighting is crisp and bright against a dark background to make the fresh colors pop." src="/garden_fresh.png"/>
+          </div>
+          <div class="p-6 relative">
+            <div class="absolute top-0 right-6 -translate-y-1/2 bg-surface-container text-tertiary font-label-md px-3 py-1 rounded-full border border-tertiary/30 shadow-lg">
+              $18.50
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-2 mt-2">Garden Fresh</h3>
+            <p class="font-body-md text-on-surface-variant text-sm mb-4 line-clamp-2">Roasted bell peppers, red onion, cherry tomatoes, kalamata olives, and feta crumble.</p>
+            <button class="w-full py-2 border border-primary/30 rounded-full text-primary font-label-md hover:bg-primary/10 transition-colors">
+              Add to Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="about">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Why Choose Us</h2>
+          <p class="font-body-md text-on-surface-variant">We bring passion to every slice, ensuring an unforgettable experience.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="glass-panel p-8 rounded-xl border border-white/5 text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">eco</span>
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-3">Fresh Ingredients</h3>
+            <p class="font-body-md text-on-surface-variant text-sm">Locally sourced produce and premium imported cheeses for the perfect bite.</p>
+          </div>
+          <div class="glass-panel p-8 rounded-xl border border-white/5 text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-3">Wood-Fired</h3>
+            <p class="font-body-md text-on-surface-variant text-sm">Authentic brick ovens heat up to 900°F for that perfect charred, bubbly crust.</p>
+          </div>
+          <div class="glass-panel p-8 rounded-xl border border-white/5 text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">local_shipping</span>
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-3">Fast Delivery</h3>
+            <p class="font-body-md text-on-surface-variant text-sm">Hot and fresh, straight from our oven to your door in record time.</p>
+          </div>
+          <div class="glass-panel p-8 rounded-xl border border-white/5 text-center group hover:-translate-y-2 transition-transform duration-300">
+            <div class="w-16 h-16 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+              <span class="material-symbols-outlined text-3xl">star</span>
+            </div>
+            <h3 class="font-headline-md text-xl text-on-surface mb-3">Excellent Service</h3>
+            <p class="font-body-md text-on-surface-variant text-sm">Our dedicated staff ensures every order meets our gold standard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto" id="specials">
+      <div class="text-center mb-16">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Special Offers</h2>
+        <p class="font-body-md text-on-surface-variant">Exclusive deals crafted for sharing (or treating yourself).</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="glass-panel rounded-xl p-8 border border-white/5 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+          <h3 class="font-headline-md text-2xl text-on-surface mb-2">Family Feast</h3>
+          <p class="font-body-md text-on-surface-variant mb-6">2 Large Pizzas, Garlic Knots, and a 2L Soda.</p>
+          <div class="font-display-lg text-3xl text-tertiary mb-6">$45.00</div>
+          <button class="bg-gradient-to-r from-[#E25822] to-primary-container text-white px-6 py-2 rounded-full font-label-md w-full hover:scale-105 transition-transform duration-300">
+            Claim Offer
+          </button>
+        </div>
+        <div class="glass-panel rounded-xl p-8 border border-tertiary/30 relative overflow-hidden group shadow-[0_0_15px_rgba(233,196,0,0.1)]">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-tertiary/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+          <div class="absolute top-4 right-4 bg-tertiary text-on-tertiary text-xs font-bold px-2 py-1 rounded">POPULAR</div>
+          <h3 class="font-headline-md text-2xl text-on-surface mb-2">Buy One, Get One</h3>
+          <p class="font-body-md text-on-surface-variant mb-6">Buy any signature pizza, get a classic cheese 50% off.</p>
+          <div class="font-display-lg text-3xl text-tertiary mb-6">Save 50%</div>
+          <button class="bg-gradient-to-r from-tertiary to-tertiary-container text-on-tertiary px-6 py-2 rounded-full font-label-md w-full hover:scale-105 transition-transform duration-300">
+            Claim Offer
+          </button>
+        </div>
+        <div class="glass-panel rounded-xl p-8 border border-white/5 relative overflow-hidden group">
+          <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform duration-500"></div>
+          <h3 class="font-headline-md text-2xl text-on-surface mb-2">Weekend Special</h3>
+          <p class="font-body-md text-on-surface-variant mb-6">1 Large Pizza, Wings, and 2 Craft Beers.</p>
+          <div class="font-display-lg text-3xl text-tertiary mb-6">$38.00</div>
+          <button class="bg-gradient-to-r from-[#E25822] to-primary-container text-white px-6 py-2 rounded-full font-label-md w-full hover:scale-105 transition-transform duration-300">
+            Claim Offer
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="gallery">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="font-headline-lg text-headline-lg text-primary mb-4">A Feast for the Eyes</h2>
+          <p class="font-body-md text-on-surface-variant">Glimpse into our kitchen and the Lumina experience.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+          <div class="col-span-2 row-span-2 rounded-xl overflow-hidden group">
+            <img alt="Ultra-wide, cinematic shot of a beautifully topped artisan pizza with melted cheese, fresh herbs, and a perfectly charred crust." class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0knO4dmYM9De8PJyvMREKQimQiy52VpvTQyMQeHnncPvEtKp8XeM_tO7omu_rsDgSaO_xbkxzuX6uZwIHdEdZFtLWEKL1bn3-Pu1hVn5tFFER9BGU5pa1OkV9cz-hNnv1Hmbg13UlV6DGBA8wSVJ6ShZl-6kGMsvWtUVkDtfvDk84CMQHZrI06iFgrIA4GpVAm1iRehf659LvdQiF7QLykneHat9bihASMHU-jeiKiphQbnQkQksQfAzgy8Z2MnQRJ8dsAwCBilc"/>
+          </div>
+          <div class="rounded-xl overflow-hidden group">
+            <img alt="Cinematic, close-up shot of a wood-fired pizza being pulled out of a traditional stone oven with a wooden paddle." class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRdJM7mX2Hqf4Wy7VMKeLIw545yks-6Jkt9pNSKEkBvU057ruWl3pbmNoNIyA2PayD2fnGhK-GHOIPmKRaKcIp1ZnNEfy13-oX_WWLvSu4b-Lb_wGdPwWEygrY0b6EbDMJHXgDNoyyL5hZYstwGCrZZbtd6nIXLxV-aiNoOcXTb2Nji7wkVk2kZ4KhcEZftVnuMhSiY1F2gmkXgUNdLYQ12y5P0nfRHG9vDHL7sukMQuisp50TiZQYu9_put45q9w2pCkhVXvedK8"/>
+          </div>
+          <div class="rounded-xl overflow-hidden group">
+            <img alt="Gourmet pizza preparation: fresh buffalo mozzarella balls, vibrant basil leaves, and artisanal tomato sauce." class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcz-03ewuncAJPzvHXvEmA-p5-GW_OQikuQO_5Q0Elf9U-dO53AMXl477tX7LQeT2EnSBV5WqJSAZ93HfV4joOxRTK6jFGi_F1fR5DHaOSgZOLLXAj4fE2nwXchTrPk3KJ6Skl0hZI4Rwq7tNyNSaCtyokV0IsSAgljT457IZYhsQXTr2ttpYvXrEo-1eVG8n5sNfVHcSQAOpzi5ZDw7QEDcNX4YMX-ESbKbl4OfPy1WQsht8Wpqgj3OnwSV-nADTydWpait6S8BI"/>
+          </div>
+          <div class="col-span-2 rounded-xl overflow-hidden group">
+            <img alt="Pizza close up" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3lBt9XHzpWvkDsn2H01vH2QDvhuNoy9nKkpMKq3GVqPFxMCqY9j8NCoUVd7obmjNaptehxINAVBOFfwlQbgaoVaCvemb6l6aVUc7KoBikX7CdUk_Hdef5nh-RQqlzZJ3Pw0w_WewI-rDHz2CmgxwU4yVZYPixpCo2bdBBW94AttplfQ-FJH84fGVR8-FHibzfHdKBdNPwyMt8UHjk-EH3oln7bVLl6acOlvzzuAb1WRv57BwIfSRnfxFefL42fTRlJ8mdE-XFB1Q"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto overflow-hidden" id="reviews">
+      <div class="text-center mb-16">
+        <h2 class="font-headline-lg text-headline-lg text-primary mb-4">What Our Customers Say</h2>
+        <p class="font-body-md text-on-surface-variant">Real reviews from our beloved patrons.</p>
+      </div>
+      <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 scrollbar-hide">
+        <div class="snap-center shrink-0 w-[85vw] md:w-[400px] glass-panel p-8 rounded-xl border border-white/5 flex flex-col gap-4">
+          <div class="flex text-tertiary">
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+          </div>
+          <p class="font-body-md text-on-surface italic">"The truffle mushroom pizza changed my life. The crust is absolute perfection, and the flavors are incredibly balanced."</p>
+          <div class="mt-auto font-label-md text-primary">- Sarah Jenkins</div>
+        </div>
+        <div class="snap-center shrink-0 w-[85vw] md:w-[400px] glass-panel p-8 rounded-xl border border-white/5 flex flex-col gap-4">
+          <div class="flex text-tertiary">
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+          </div>
+          <p class="font-body-md text-on-surface italic">"Best pizza in the city, hands down. The delivery was super fast, and the pizza was still piping hot when it arrived."</p>
+          <div class="mt-auto font-label-md text-primary">- Michael Chen</div>
+        </div>
+        <div class="snap-center shrink-0 w-[85vw] md:w-[400px] glass-panel p-8 rounded-xl border border-white/5 flex flex-col gap-4">
+          <div class="flex text-tertiary">
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined">star_half</span>
+          </div>
+          <p class="font-body-md text-on-surface italic">"A premium experience from start to finish. The spicy pepperoni has the perfect kick. Will definitely be ordering again!"</p>
+          <div class="mt-auto font-label-md text-primary">- Emma Thompson</div>
+        </div>
+        <div class="snap-center shrink-0 w-[85vw] md:w-[400px] glass-panel p-8 rounded-xl border border-white/5 flex flex-col gap-4">
+          <div class="flex text-tertiary">
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+            <span class="material-symbols-outlined fill-current">star</span>
+          </div>
+          <p class="font-body-md text-on-surface italic">"The crust! Oh my word, the crust. It's chewy, crispy, and has that perfect smoky flavor. Lumina knows what they are doing."</p>
+          <div class="mt-auto font-label-md text-primary">- David Rodriguez</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit Our Pizzerias Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="locations">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="flex flex-col gap-8">
+            <div>
+              <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Find a Lumina Near You</h2>
+              <p class="font-body-md text-on-surface-variant">Experience our wood-fired perfection in person. Join us at our locations for an unforgettable dining experience.</p>
+            </div>
+            <div class="flex flex-col gap-6">
+              <div class="glass-panel p-6 rounded-xl border border-white/5 flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container text-2xl">location_on</span>
+                  <h3 class="font-headline-md text-xl text-on-surface">Downtown Flagship</h3>
+                </div>
+                <div class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant pl-9">
+                  <p>123 Culinary Ave, Food District, City, ST 12345</p>
+                  <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container">call</span> (555) 123-4567</p>
+                  <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container">schedule</span> Mon-Sun: 11:00 AM - 11:00 PM</p>
+                </div>
+              </div>
+              <div class="glass-panel p-6 rounded-xl border border-white/5 flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <span class="material-symbols-outlined text-primary-container text-2xl">location_on</span>
+                  <h3 class="font-headline-md text-xl text-on-surface">Brooklyn Heights</h3>
+                </div>
+                <div class="flex flex-col gap-2 font-body-md text-sm text-on-surface-variant pl-9">
+                  <p>456 Artisan Way, Brooklyn, NY 11201</p>
+                  <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container">call</span> (555) 987-6543</p>
+                  <p class="flex items-center gap-2"><span class="material-symbols-outlined text-[16px] text-primary-container">schedule</span> Tue-Sun: 12:00 PM - 10:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="h-[500px] w-full rounded-2xl overflow-hidden glass-panel border border-white/5 relative">
+            <div class="absolute inset-0 bg-surface-dim/80 backdrop-blur-sm flex flex-col items-center justify-center gap-4 z-10">
+              <span class="material-symbols-outlined text-5xl text-primary/50">map</span>
+              <p class="font-label-md text-on-surface-variant tracking-widest uppercase">Interactive Map Placeholder</p>
+            </div>
+            <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 1px, transparent 1px), radial-gradient(circle at 70% 60%, rgba(255,180,172,0.1) 2px, transparent 2px); background-size: 30px 30px;"></div>
+            <div class="absolute top-1/4 left-1/3 w-4 h-4 bg-primary rounded-full shadow-[0_0_15px_#ffb4ac] animate-pulse"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-3 h-3 bg-primary rounded-full shadow-[0_0_10px_#ffb4ac] animate-pulse" style="animation-delay: 1s;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full py-section-gap bg-surface-container-lowest border-t border-outline-variant/30 flat no shadows">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter max-w-7xl mx-auto">
+        <div class="col-span-1 md:col-span-2">
+          <div class="font-headline-lg text-headline-lg text-primary mb-4">LUMINA PIZZA</div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+            Crafting the finest wood-fired pizzas with artisanal ingredients and an unwavering passion for culinary perfection.
+          </p>
+          <div class="font-label-md text-label-md text-on-surface-variant">
+            © 2024 Lumina Wood-Fired Pizzeria. All rights reserved.
+          </div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h4 class="font-headline-md text-headline-md text-on-surface mb-2">Links</h4>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all hover:text-on-surface" href="#">Hours</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all hover:text-on-surface" href="#">Map</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all hover:text-on-surface" href="#">Contact</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all hover:text-on-surface" href="#">Legal</a>
+          <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all hover:text-on-surface" href="#">Privacy</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h4 class="font-headline-md text-headline-md text-on-surface mb-2">Connect</h4>
+          <p class="font-body-md text-on-surface-variant">Follow us for the latest creations and offers.</p>
+          <div class="flex gap-4 mt-2">
+            <a class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-primary hover:bg-primary/20 transition-colors" href="#">
+              <span class="material-symbols-outlined">share</span>
+            </a>
+            <a class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-primary hover:bg-primary/20 transition-colors" href="#">
+              <span class="material-symbols-outlined">mail</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Main JavaScript -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
